@@ -236,7 +236,7 @@
 #elif defined ( __ICCARM__ ) /* IAR Ewarm 5.41+ */
 #   define OPTIMIZE_HIGH _Pragma("optimize=high")
 #elif defined (  __GNUC__  ) /* GCC CS3 2009q3-68 */
-#   define OPTIMIZE_HIGH __attribute__((optimize(s)))
+#   define OPTIMIZE_HIGH __attribute__((optimize("s"))) //TODO:this is quick fix. auth:Hitoshi Chano. ref:(https://www.avrfreaks.net/forum/latest-atmel-studio-701006-fails-compile-cyclecounterc)
 #endif
 
 #include "interrupt.h"
